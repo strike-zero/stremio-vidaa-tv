@@ -1,6 +1,6 @@
 /*
  * Stremio Theater - Core chunk replacement
- * Loads v5 stremio-core-web (0.65.1) WASM backend via external Worker
+ * Loads v5 stremio-core-web (0.57.0) WASM backend via external Worker
  * Replaces the original inline worker with v5's worker.js + WASM binary
  *
  * Module ids are the ones Theater 1.10.0's main.js requires off chunk 9114:

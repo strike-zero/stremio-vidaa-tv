@@ -44,6 +44,49 @@
 (function() {
     'use strict';
 
+    // ── Polyfills for older Chromium web engines (e.g. Chromium 88 on VIDAA U6) ──
+    if (typeof window !== "undefined") {
+        if (!Object.hasOwn) {
+            Object.hasOwn = function(obj, prop) {
+                return Object.prototype.hasOwnProperty.call(obj, prop);
+            };
+        }
+        if (typeof crypto !== "undefined" && !crypto.randomUUID) {
+            crypto.randomUUID = function() {
+                return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function(c) {
+                    return (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16);
+                });
+            };
+        }
+        if (!Array.prototype.at) {
+            Array.prototype.at = function(n) {
+                n = (n < 0 ? Math.ceil(n) : Math.floor(n)) || 0;
+                if (n < 0) n += this.length;
+                if (n < 0 || n >= this.length) return undefined;
+                return this[n];
+            };
+        }
+        if (!String.prototype.at) {
+            String.prototype.at = function(n) {
+                n = (n < 0 ? Math.ceil(n) : Math.floor(n)) || 0;
+                if (n < 0) n += this.length;
+                if (n < 0 || n >= this.length) return "";
+                return this[n];
+            };
+        }
+        if (typeof AbortSignal !== "undefined" && !AbortSignal.timeout) {
+            AbortSignal.timeout = function(ms) {
+                var controller = new AbortController();
+                setTimeout(function() {
+                    var err = new Error("The operation was aborted due to timeout");
+                    err.name = "TimeoutError";
+                    controller.abort(err);
+                }, ms);
+                return controller.signal;
+            };
+        }
+    }
+
     var RT = {};
 
     // ── logger ────────────────────────────────────────────────────────

@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://noobygains.github.io/stremio-vidaa-tv/"><img src="https://img.shields.io/website?style=flat-square&label=Live%20Web%20App&logo=github&up_message=online&down_message=offline&url=https%3A%2F%2Fnoobygains.github.io%2Fstremio-vidaa-tv%2F" alt="Live Web App" /></a>
   <img src="https://img.shields.io/badge/Theater-v1.10.0-7b5bf5?style=flat-square" alt="Theater 1.10.0" />
-  <img src="https://img.shields.io/badge/Core%20WASM-0.65.1-00b4d8?style=flat-square" alt="Core Web 0.65.1" />
+  <img src="https://img.shields.io/badge/Core%20WASM-0.57.0-00b4d8?style=flat-square" alt="Core Web 0.57.0" />
   <img src="https://img.shields.io/badge/Patch%20Build-v9-f59e0b?style=flat-square" alt="Build v9" />
   <img src="https://img.shields.io/badge/Platform-VIDAA%20OS%20(Hisense%20%2F%20Toshiba)-22c55e?style=flat-square" alt="Platform VIDAA OS" />
   <a href="https://github.com/NoobyGains/stremio-vidaa-tv/stargazers"><img src="https://img.shields.io/github/stars/NoobyGains/stremio-vidaa-tv?style=flat-square&color=eab308" alt="GitHub Stars" /></a>
@@ -45,7 +45,7 @@ You don't need a PC, USB stick, or Developer Mode to start watching right now:
 
 If you own a **Hisense Laser Projector** (`PX3-Pro`, `PX1-Pro`, `PX1HE`, `M2 Pro`, `Smart Mini C2`, `C2 Pro`, `C2 Ultra`) or **VIDAA Smart TV**, you already know the problem: the official *Stremio Lite* app in the VIDAA store is crippled, buffers after 30 seconds, and blocks community addons — while standard TV sideload guides silently fail on projector firmware.
 
-This project takes Stremio's latest **Theater `1.10.0`** TV interface and **`@stremio/stremio-core-web@0.65.1`** Rust/WASM engine, and pairs them with a purpose-built **52-module VIDAA patch layer** engineered specifically for Hisense projectors and TVs:
+This project takes Stremio's latest **Theater `1.10.0`** TV interface and **`@stremio/stremio-core-web@0.57.0`** Rust/WASM engine, and pairs them with a purpose-built **52-module VIDAA patch layer** engineered specifically for Hisense projectors and TVs:
 
 | Capability | Official VIDAA Store (*Stremio Lite*) | ✨ **Stremio for Projectors &amp; VIDAA (This Build)** |
 | :--- | :---: | :--- |
@@ -200,7 +200,7 @@ stremio-vidaa-tv/
 ├── src/                     # Deconstructed, human-readable multi-line source tree:
 │   ├── theater/             #   • Theater 1.10.0 (307 main.js modules + route chunks)
 │   ├── video/               #   • Stremio Video (72 modules: VidaaVideo, HTMLVideo, HLS, etc.)
-│   └── core/                #   • @stremio/stremio-core-web 0.65.1 worker & WASM bridge
+│   └── core/                #   • @stremio/stremio-core-web 0.57.0 worker & WASM bridge
 ├── patches/                 # VIDAA patch layer (our source of truth):
 │   ├── head/kernel/         #   • 10 shared kernel modules (runtime, core seam, keys, DOM, UI, etc.)
 │   ├── head/<domain>/       #   • 42 feature patches (player, audio, subtitles, settings, etc.)

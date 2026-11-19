@@ -28,12 +28,12 @@
       }
     },
     "core-web": {
-      "version": "0.65.1",
-      "origin": "@stremio/stremio-core-web@0.65.1 (https://www.npmjs.com/package/@stremio/stremio-core-web, MIT). v5-worker.js is the package worker.js bundled self-contained by scripts/sync-core.mjs (esbuild, wasm required as relative URL 'stremio_core_web_bg.wasm').",
-      "dir": "upstream/core-web/0.65.1",
+      "version": "0.57.0",
+      "origin": "@stremio/stremio-core-web@0.57.0 (https://www.npmjs.com/package/@stremio/stremio-core-web, MIT). v5-worker.js is the package worker.js bundled self-contained by scripts/sync-core.mjs (esbuild, wasm required as relative URL 'stremio_core_web_bg.wasm').",
+      "dir": "upstream/core-web/0.57.0",
       "files": {
-        "core-web/0.65.1/stremio_core_web_bg.wasm": "sha256:9c694b802b97308a6ba6c1915e6966463e11e2e34159c77d7823759f5ba13954",
-        "core-web/0.65.1/v5-worker.js": "sha256:32f0b348afb37a09a1dec4b62d9f57aa6ba2aec5aff3c4415d25867f17019150"
+        "core-web/0.57.0/stremio_core_web_bg.wasm": "sha256:b7b2effc52053f78436aebac299b5d51b5158a66355d918b2690c4dc9826238e",
+        "core-web/0.57.0/v5-worker.js": "sha256:e936363f4e826e4044c12b69a325d99798be26492ebc470a102256714b8ec50e"
       }
     },
     "translations": {
